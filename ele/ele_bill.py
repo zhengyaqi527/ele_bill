@@ -3,6 +3,7 @@ import base64
 
 # 获取token
 
+
 def get_token(client_id=None, client_secret=None):
 
     grant_type = 'client_credentials'
@@ -36,16 +37,9 @@ def analyse_img(access_token, image_path):
     return response.json()
 
 
-def ayalyse_bill(img_response):
-    words_result = img_response['words_result']
-
-
-
-
-
 if __name__ == "__main__":
-    
-    image_path = '/mnt/d/Desktop/ele-2.jpg'
+    image_path = '/mnt/d/Desktop/ele.jpg'
     access_token = get_token()
     res = analyse_img(access_token, image_path)
     print(res)
+    # pass
